@@ -15,6 +15,9 @@
     <description>Spring Boot Project Sample for Github Actions, CICD</description>
     <properties>
         <java.version>11</java.version>
+        <sonar.projectKey>SpringBootCICD</sonar.projectKey>
+        <sonar.organization>Babatunde</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io/</sonar.host.url>
     </properties>
     <dependencies>
         <dependency>
