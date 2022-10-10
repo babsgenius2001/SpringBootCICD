@@ -109,6 +109,8 @@ jobs:
           path: target/springbootcicd-0.0.1-SNAPSHOT.jar
   #Build and Publish Docker Image's job
   build-image:
+    needs: build
+    name: Publish to Docker Hub
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -128,7 +130,7 @@ jobs:
   #Deploy's job
   deploy:
     #Depends on build's job
-    needs: build
+    needs: build-image
     name: Deploy
     #Run on Ubuntu using the latest version
     runs-on: ubuntu-latest
