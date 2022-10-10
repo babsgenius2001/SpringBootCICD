@@ -8,29 +8,29 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
-public class DataControllerTest {
+class DataControllerTest {
 
     @Autowired
     DataController dataController;
 
     @Test
-    public void health() {
+    void health() {
         assertEquals("HEALTH CHECK OK!", dataController.healthCheck());
     }
 
     @Test
-    public void version() {
+    void version() {
         assertEquals("The actual version is 1.0.0", dataController.version());
     }
 
     @Test
-    public void nationsLength() {
+    void nationsLength() {
         Integer nationsLength = dataController.getRandomNations().size();
         assertEquals(10, nationsLength);
     }
 
     @Test
-    public void currenciesLength() {
+    void currenciesLength() {
         Integer currenciesLength = dataController.getRandomCurrencies().size();
         assertEquals(20, currenciesLength);
     }
