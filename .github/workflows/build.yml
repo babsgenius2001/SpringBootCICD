@@ -125,7 +125,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
-          repository: dockerHubUser/dockerHubRepository
+          repository: babsgenius2001/springbootcicd
           tags: ${{github.run_number}}
   #Deploy's job
   deploy:
